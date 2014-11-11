@@ -1,3 +1,4 @@
+//<![CDATA[
 var nopage;
 var jenis;
 var nomerhal;
@@ -155,3 +156,4 @@ function finddatepost(root) {
 	}
 	location.href = alamat
 }
+//]]>
