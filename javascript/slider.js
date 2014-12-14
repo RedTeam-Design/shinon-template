@@ -1,1 +1,112 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('M 1U(b){(M(a){2 f={n:"",q:4,W:"",1l:2m,1j:2j,1i:6,X:"2i",1D:"",1w:["2f","2d","2a","29","28","27","26","25","24","23","22","1F"],m:I};f=a.20({},f,b);2 g=a(f.W);g.1Z(\'<O i="13"><12 i="R"></12></O>\').1Y(f.X);2 h=M(D){2 z,B,x,e,F,C,G,j,E,y,A="",w=D.1s.1X;U(2 H=0;H<w.J;H++){U(2 d=0;d<w[H].16.J;d++){3(w[H].16[d].1W=="1V"){z=w[H].16[d].18;1x}}3("V$T"u w[H]){F=w[H].V$T.1b.P(/\\/s[0-9]+\\-c/g,"/s"+f.1l);3(w[H].V$T.1b.1T("1p.1S.1R")!=-1){F=w[H].V$T.1b.P("1e","0")}}N{F=f.1D.P(/\\/s[0-9]+\\-c/g,"/s"+f.1l)}3("1v"u w[H]){x=w[H].1v.$t}N{3("1h"u w[H]){x=w[H].1h.$t}N{x=""}}x=x.P(/<\\S[^>]*>/g,"");3(x.J>f.1j){x=x.L(0,f.1j)+"..."}B=w[H].1z.$t;y=w[H].Y.$t.L(0,10);C=y.L(0,4);G=y.L(5,7);j=y.L(8,10);E=f.1w[1I(G,10)-1];A+=\'<Q i="1H"><a 1z="\'+B+\'" i="" 18="\'+z+\'"><1p 1G="\'+F+\'"/></a><O i="21"><1E><a 18="\'+z+\'">\'+B+\'</a></1E></O><p i="1J"><l i="1K-1L"><l i="1M">\'+j+\'</l> <l i="1N">\'+E+\'</l> <l i="1O">\'+C+"</l></l>"+x+"</p></Q>"}g.1P("12.R").1Q(A);3(!f.1i){a(f.W+" .13").1C({1B:"1y",1r:".R > Q",1q:6,1o:6,1n:6,1u:6,});g.1t(f.X)}};a.11((f.n===""?K.v.14+"//"+K.v.15:f.n)+"/17/19/1h"+(f.m===I?"":"/-/"+f.m)+"?1m-1a=0&1c=Y&1d=1f-u-1g",M(e){Z=e.1s.2b$2c.$t;3(Z<=f.q){f.q=Z}2 r=[];2e(r.J<f.q){2 p=1A.2g(1A.2h()*Z);2 d=I;U(2 k=0;k<r.J;k++){3(r[k]==p){d=6;1x}}3(!d){r[r.J]=p}}3(f.1i==6){2 j;U(2 o=0;o<f.q;o++){j=a.11((f.n===""?K.v.14+"//"+K.v.15:f.n)+"/17/19/1e"+(f.m===I?"":"/-/"+f.m)+"?2k-2l="+r[o]+"&1m-1a=1&1c=Y&1d=1f-u-1g",h,"1k")}a.2n(j).2o(M(){a(f.W+" .13").1C({1B:"1y",1r:".R > Q",1q:6,1o:6,1n:6,1u:I,2p:f.q*2q,});g.1t(f.X)})}N{a.11((f.n===""?K.v.14+"//"+K.v.15:f.n)+"/17/19/1e"+(f.m===I?"":"/-/"+f.m)+"?1m-1a="+f.q+"&1c=Y&1d=1f-u-1g",h,"1k")}},"1k")})(2r)};',62,152,'||var|if|||true||||||||||||class|||span|tagName|blogURL|||MaxPost||||in|location|||||||||||||false|length|window|substring|function|else|div|replace|li|slides||thumbnail|for|media|woocontent|loadingClass|published|Total_Posts_Number||get|ul|cbtpostslid_slider_wrap|protocol|host|link|feeds|href|posts|results|url|orderby|alt|default|json|script|summary|Rposta|Summarylength|jsonp|ImageSize|max|pauseOnHover|smoothHeight|img|animationLoop|selector|feed|removeClass|mousewheel|content|MonthNames|break|fade|title|Math|animation|flexslider|pBlank|h3|Dec|src|cbtpostslid_slider_item|parseInt|caption|post|meta|dd|dm|dy|find|append|com|youtube|indexOf|cbtwooslid|alternate|rel|entry|addClass|html|extend|slider_caption|Nov|Oct|Sep|Aug|Jul|Jun|May|Apr|Mar|openSearch|totalResults|Feb|while|Jan|ceil|random|waiting|150|start|index|500|when|done|initDelay|700|jQuery'.split('|'),0,{}))
+function cbtwooslid(b) { (function (a) {
+		var f = {
+			blogURL: "",
+			MaxPost: 4,
+			woocontent: "",
+			ImageSize: 500,
+			Summarylength: 150,
+			Rposta: true,
+			loadingClass: "waiting",
+			pBlank: "",
+			MonthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			tagName: false
+		};
+		f = a.extend({},
+		f, b);
+		var g = a(f.woocontent);
+		g.html('<div class="cbtpostslid_slider_wrap"><ul class="slides"></ul></div>').addClass(f.loadingClass);
+		var h = function (D) {
+			var z, B, x, e, F, C, G, j, E, y, A = "",
+			w = D.feed.entry;
+			for (var H = 0; H < w.length; H++) {
+				for (var d = 0; d < w[H].link.length; d++) {
+					if (w[H].link[d].rel == "alternate") {
+						z = w[H].link[d].href;
+						break
+					}
+				}
+				if ("media$thumbnail" in w[H]) {
+					F = w[H].media$thumbnail.url.replace(/\/s[0-9]+\-c/g, "/s" + f.ImageSize);
+					if (w[H].media$thumbnail.url.indexOf("img.youtube.com") != -1) {
+						F = w[H].media$thumbnail.url.replace("default", "0")
+					}
+				} else {
+					F = f.pBlank.replace(/\/s[0-9]+\-c/g, "/s" + f.ImageSize)
+				}
+				if ("content" in w[H]) {
+					x = w[H].content.$t
+				} else {
+					if ("summary" in w[H]) {
+						x = w[H].summary.$t
+					} else {
+						x = ""
+					}
+				}
+				x = x.replace(/<\S[^>]*>/g, "");
+				if (x.length > f.Summarylength) {
+					x = x.substring(0, f.Summarylength) + "..."
+				}
+				B = w[H].title.$t;
+				y = w[H].published.$t.substring(0, 10);
+				C = y.substring(0, 4);
+				G = y.substring(5, 7);
+				j = y.substring(8, 10);
+				E = f.MonthNames[parseInt(G, 10) - 1];
+				A += '<li class="cbtpostslid_slider_item"><a title="' + B + '" class="" href="' + z + '"><img src="' + F + '"/></a><div class="slider_caption"><h3><a href="' + z + '">' + B + '</a></h3></div><p class="caption"><span class="post-meta"><span class="dd">' + j + '</span> <span class="dm">' + E + '</span> <span class="dy">' + C + "</span></span>" + x + "</p></li>"
+			}
+			g.find("ul.slides").append(A);
+			if (!f.Rposta) {
+				a(f.woocontent + " .cbtpostslid_slider_wrap").flexslider({
+					animation: "fade",
+					selector: ".slides > li",
+					animationLoop: true,
+					smoothHeight: true,
+					pauseOnHover: true,
+					mousewheel: true,
+				});
+				g.removeClass(f.loadingClass)
+			}
+		};
+		a.get((f.blogURL === "" ? window.location.protocol + "//" + window.location.host: f.blogURL) + "/feeds/posts/summary" + (f.tagName === false ? "": "/-/" + f.tagName) + "?max-results=0&orderby=published&alt=json-in-script", function (e) {
+			Total_Posts_Number = e.feed.openSearch$totalResults.$t;
+			if (Total_Posts_Number <= f.MaxPost) {
+				f.MaxPost = Total_Posts_Number
+			}
+			var r = [];
+			while (r.length < f.MaxPost) {
+				var p = Math.ceil(Math.random() * Total_Posts_Number);
+				var d = false;
+				for (var k = 0; k < r.length; k++) {
+					if (r[k] == p) {
+						d = true;
+						break
+					}
+				}
+				if (!d) {
+					r[r.length] = p
+				}
+			}
+			if (f.Rposta == true) {
+				var j;
+				for (var o = 0; o < f.MaxPost; o++) {
+					j = a.get((f.blogURL === "" ? window.location.protocol + "//" + window.location.host: f.blogURL) + "/feeds/posts/default" + (f.tagName === false ? "": "/-/" + f.tagName) + "?start-index=" + r[o] + "&max-results=1&orderby=published&alt=json-in-script", h, "jsonp")
+				}
+				a.when(j).done(function () {
+					a(f.woocontent + " .cbtpostslid_slider_wrap").flexslider({
+						animation: "fade",
+						selector: ".slides > li",
+						animationLoop: true,
+						smoothHeight: true,
+						pauseOnHover: true,
+						mousewheel: false,
+						initDelay: f.MaxPost * 700,
+					});
+					g.removeClass(f.loadingClass)
+				})
+			} else {
+				a.get((f.blogURL === "" ? window.location.protocol + "//" + window.location.host: f.blogURL) + "/feeds/posts/default" + (f.tagName === false ? "": "/-/" + f.tagName) + "?max-results=" + f.MaxPost + "&orderby=published&alt=json-in-script", h, "jsonp")
+			}
+		},
+		"jsonp")
+	})(jQuery)
+};
